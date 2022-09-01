@@ -7,7 +7,6 @@ function Home() {
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
-  const [type, setType] = useState("");
   const [categories, setCategories] = useState([]);
   const navigate = useNavigate();
 
@@ -19,14 +18,16 @@ function Home() {
 
   return (
     <div className="App">
-      <div>
-        <label>Number Of Questions</label>
+
+      <h1>Quiz Game</h1>
+      <div className='amount flex'>
+        <label className='label'>Number Of Questions</label>
         <input type="text" value = {amount} onChange={(e) => setAmount(e.target.value)}/>
       </div>
 
-      <div>
-        <label>Select Category:</label>
-        <select onChange={(e) => setCategory(e.target.value)}>
+      <div className='category flex'>
+        <label className='label'>Select Category:</label>
+        <select className='select' onChange={(e) => setCategory(e.target.value)}>
           <option id='0'>Any Category</option>
           {
             categories.map(cd => <option key={cd.id} value={cd.id}>{cd.name}</option>)
@@ -34,9 +35,9 @@ function Home() {
         </select>
       </div>
 
-      <div>
-        <label>Select Difficulty:</label>
-        <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
+      <div className='difficulty flex'>
+        <label className='label'>Select Difficulty:</label>
+        <select className='select' value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
           <option value="">Any Difficulty</option>
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
@@ -44,16 +45,9 @@ function Home() {
         </select>
       </div>
 
-      <div>
-        <label>Select Type:</label>
-        <select value={type} onChange={(e) => setType(e.target.value)}>
-          <option value="">Any Type</option>
-          <option value="multiple">Multiple Choice</option>
-          <option value="boolean">True/False</option>
-        </select>
+      <div className='startParent'>
+          <button className='startbtn' onClick={() => navigate("questions", {state : {amount,category,difficulty}})}>Start Quiz</button>
       </div>
-
-      <button onClick={() => navigate("questions", {state : {amount,category,difficulty,type}})}>Start Quiz</button>
     </div>
   );
 }

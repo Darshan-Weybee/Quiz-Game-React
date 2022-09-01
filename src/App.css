@@ -1,38 +1,150 @@
 .App {
+  width: 50%;
+  margin: 2rem auto;
+}
+
+.App h1{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+}
+
+.label{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.8rem 0;
+}
+
+.select{
+  height: 2.1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: 5px solid #252d4a;
+}
+
+.amount{
+  margin: 1rem;
+}
+
+.amount input{
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 5px solid #252d4a;
+  font-size: 1.1rem;
+}
+
+.category{
+  margin: 1rem;
+}
+
+.difficulty{
+  margin: 1rem;
+}
+
+.startParent{
+  margin: 1rem;
+  text-align: center;
+}
+
+.startbtn{
+  padding: 0.9rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #252d4a;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Question{
+  position: fixed;
+  top : 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #252d4a;
+  width: 30%;
+  border-radius: 0.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.queNumber{
+  margin: 1rem 0.8rem;
+  font-size: 1.5rem;
 }
+
+.que{
+  margin: 0 0.8rem;
+  font-size: 1.3rem;
+}
+
+.option{
+  width: 40%;
+  margin: 1rem;
+}
+
+.optionbtn{
+  margin: 0.3rem;
+  padding: 0.5rem;
+  background: none;
+  color: white;
+  border: 3px solid #3460ff;
+  border-radius: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.Answer{
+  width: 50%;
+  margin: auto;
+}
+
+.qustionList{
+  background-color: #252d4a;
+  color: white;
+  padding: 1.2rem;
+  margin: 1.2rem;
+  border-radius: 0.8rem;
+}
+
+.singleQuestion{
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+
+.ansList{
+  margin: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.one{
+  margin: 2.1rem;
+}
+
+.score{
+  background-color: #252d4a;
+  color: white;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
+.resetParent{
+  width: auto;
+  margin: 1.9rem auto;
+  text-align: center;
+}
+
+.resetbtn{
+  background-color: #252d4a;
+  color: white;
+  padding: 1.3rem;
+  font-size: 1.5rem;
+  border-radius: 0.8rem;
+}
+
+
+
