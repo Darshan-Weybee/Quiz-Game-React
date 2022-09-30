@@ -17,10 +17,10 @@ function Questions(){
         .then(res => setData(res.data.results))
     },[amount,category,difficulty])
 
-    const btnHandle = (e) =>{
+    const btnHandle = (e) => {
         if(e.target.textContent === data[index].correct_answer) setRight(ps => ps + 1);
         setAnswer(pst => [...pst, e.target.textContent])
-        setIndex(pst => pst + 1);
+        setIndex(pst => pst + 1); 
     }
 
     const shuffleArray = (a, b) => {
